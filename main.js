@@ -19,9 +19,9 @@ let generateStoryRow = function (storyData){
     let tr = document.createElement('tr');
     tr.class = "storyRow";
 
-    tr.innerHTML =`<ts class="story-row">
+    tr.innerHTML =`<tr class="story-row">
     <td class="story-title">
-     a href=${storyData['URL']}" target"_blank"=${storyData['title]']}=/a>
+     <a href=${storyData['url']}" target"_blank"=${storyData['title']}> ${storyData['title']} </a>
      </td>
     </tr>`;
      return tr;
@@ -30,22 +30,21 @@ let generateStoryRow = function (storyData){
 }
  
     let getTopNewsStories = async () => {
-    let = response = await fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty');
-
+    let response = await fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
     let data = await response.json();
     for(let i = 0; i < 100; i++){
         //console.log(data[i]);
         let storyResponse = await fetch(`https://hacker-news.firebaseio.com/v0/item/${data[i]}.json?print=pretty`);
 
         let storyData = await storyResponse.json();
-         console.log(storyData);
-
+        console.log(storyData);
+        contentTable.appendChild(generateStoryRow(storyData));
        
 
         /*
          newsStories.innerHTML += `
         
-         contentTable.appendChild(generateStoryRow(storyData)); 
+         
          newsStories.innerHTML += `
          newsStories.innerHTML = data.id
          headline.innerHTML = data.title
