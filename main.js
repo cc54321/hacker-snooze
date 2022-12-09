@@ -53,8 +53,8 @@ let generateStoryRow = function (storyData){
          score.innerHTML = data.score
 
          <div class = "card-body">
-         <h5> <a href=${storyData.url}>${storyData.title}</a> </h5>Author: ${storyData.by}
-         <div class = "content-table"> score: ${storyData.score} comments: ${storyData.descendants}
+         <h5> <a href=${storyData.url}>${storyData.title}</a> 
+         <div class = "content-table"> Author: ${storyData.by} score: ${storyData.score} comments: ${storyData.descendants}
          
               let listParent = ("#parent");
               let newLi = ("#headline")

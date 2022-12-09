@@ -11,10 +11,34 @@
     gap: 10px 2em;
   }
   
+*/
+  #navbar {
+    color: black;
+  }
+
+  #headerImage{
+    display: flex;
+    width: 100%; 
+    padding-right: 240px;
+  }
+  /*
   .box :first-child {
       align-self: center;
   }
+
+#content-table {
+  max-width: 200%;
+}
 */
+h1{
+  text-align: center;
+  font-size: 50px;
+  color: #2e72f9;
+  font-weight: 400px;
+  
+  
+}
+/*
 header{
   text-align: center;
   font-size: 60px;
@@ -22,6 +46,7 @@ header{
   font-weight: 400px;
   text-transform: uppercase;
 }
+
 table
 tfoot {
     background-color: #3f87a6;
@@ -90,7 +115,7 @@ nav ul li a:hover{
  
 
 
-/* Styling for Hero Section */
+ Styling for Hero Section 
 section{
   padding-top: 50px;
   padding-bottom: 50px;
